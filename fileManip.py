@@ -1,0 +1,7 @@
+f = open("Blowing in the wind.txt", 'r+')
+content = f.readlines()
+content.insert(0, "Blowing in the wind\n")
+content.insert(1, "Bob Dylan\n")
+content.insert(content.__len__(), "\n1962 by Warner Bros. Inc\n")
+f.seek(0,0)
+f.writelines(content)
